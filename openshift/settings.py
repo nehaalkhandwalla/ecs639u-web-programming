@@ -28,7 +28,7 @@ DEBUG = False
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
-    'test5-test5.apps.okd.eecs.qmul.ac.uk',
+    '.apps.okd.eecs.qmul.ac.uk',
 ]
 
 
