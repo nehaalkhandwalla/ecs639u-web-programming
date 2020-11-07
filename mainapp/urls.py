@@ -4,5 +4,5 @@ from .views import hello, health
 
 urlpatterns = [
     path('', hello),
-    path('health/', health)
+    path('health', health)
 ]
