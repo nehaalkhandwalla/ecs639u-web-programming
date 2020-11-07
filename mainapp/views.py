@@ -7,4 +7,6 @@ def hello(request):
 
 # health probe
 def health(request):
-    return render(request, 'mainapp/index.html', {})
+    now = datetime.datetime.now()
+    html = "<html><body>It is now %s.</body></html>" % now
+    return HttpResponse(html)
