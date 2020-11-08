@@ -25,7 +25,11 @@ SECRET_KEY = 'j=ux6%e-+8x1i*y#crd8_@7s4m3%m7khi_rm!#eexpv_)f_((a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost',
+    '.apps.okd.eecs.qmul.ac.uk'
+]
 
 
 # Application definition
