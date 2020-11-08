@@ -31,6 +31,9 @@ ALLOWED_HOSTS = [
     '.apps.okd.eecs.qmul.ac.uk'
 ]
 
+# Allow health probes with header:
+
+HEALTH_CHECK_HEADER_VALUE = 'HEALTH-PROBE'
 
 # Application definition
 
@@ -45,6 +48,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'django_allow_healthchecks.middleware.ByPassForHealthChecks',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
