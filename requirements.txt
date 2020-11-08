@@ -5,3 +5,4 @@ pytz==2020.4
 sqlparse==0.4.1
 whitenoise==5.2.0
 django-allow-healthchecks==0.1.4
+django-allow-cidr==0.3.1

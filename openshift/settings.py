@@ -35,6 +35,10 @@ ALLOWED_HOSTS = [
 
 HEALTH_CHECK_HEADER_VALUE = 'HEALTH-PROBE'
 
+# Added to allow health probes based on CIDR 
+
+ALLOWED_CIDR_NETS = ['10.128.0.0/14']
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -48,6 +52,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'allow_cidr.middleware.AllowCIDRMiddleware',
     'django_allow_healthchecks.middleware.ByPassForHealthChecks',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
