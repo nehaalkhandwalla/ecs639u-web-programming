@@ -134,7 +134,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
 
-# set location for uploaded files
-MEDIA_ROOT = os.path.join(BASE_DIR, 'mainapp/uploaded')
-
-MEDIA_URL = 'https://django-server-uploaded-files-django-serve-static.apps.okd.eecs.qmul.ac.uk/uploaded/'
+# uploaded files
+MEDIA_URL = '/uploaded/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploaded')
